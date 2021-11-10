@@ -1,0 +1,407 @@
+*{
+  list-style:none;
+}
+.contenedor-formulario {
+  padding: 5px; 
+}
+  .contenedor-formulario .formulario {
+    width: 100%;
+    margin: auto; }
+    .contenedor-formulario .formulario .input-group {
+      position: relative;
+      margin-bottom: 4px; }
+      .contenedor-formulario .formulario .input-group input[type="text"],
+      .contenedor-formulario .formulario .input-group input[type="email"],
+      .contenedor-formulario .formulario .input-group input[type="password"] {
+        font-family: "Arial";
+        font-size: 16px;
+        color: #333333;
+        width: 70%;
+        outline: none;
+        padding: 18px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #cd9fa6; } /*CAMBIA AQUI EL CONTORNO*/
+        .contenedor-formulario .formulario .input-group input[type="text"]:focus, .contenedor-formulario .formulario .input-group input[type="text"]:active,
+        .contenedor-formulario .formulario .input-group input[type="email"]:focus,
+        .contenedor-formulario .formulario .input-group input[type="email"]:active,
+        .contenedor-formulario .formulario .input-group input[type="password"]:focus,
+        .contenedor-formulario .formulario .input-group input[type="password"]:active {
+          outline: none;
+          border-bottom: 2px solid #7F1E57; }
+        .contenedor-formulario .formulario .input-group input[type="text"].error,
+        .contenedor-formulario .formulario .input-group input[type="email"].error,
+        .contenedor-formulario .formulario .input-group input[type="password"].error {
+          border-bottom: 2px solid #D32F2F; }
+          .contenedor-formulario .formulario .input-group input[type="text"].error + label,
+          .contenedor-formulario .formulario .input-group input[type="email"].error + label,
+          .contenedor-formulario .formulario .input-group input[type="password"].error + label {
+            color: #D32F2F; }
+          .contenedor-formulario .formulario .input-group label {
+         }
+        .contenedor-formulario .formulario .input-group label.label {
+          -webkit-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease;
+          margin-left: 15px;
+          font-size: 16px;
+          line-height: 16px;
+          position: absolute;
+          top: 16px;
+          left: 0; }
+          .contenedor-formulario .formulario .input-group label.label.active {
+            top: -12px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #B6B6B6; }
+      .contenedor-formulario .formulario .input-group.checkbox label, .contenedor-formulario .formulario .input-group.radio label {
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
+        padding: 5px 15px 5px 51px;
+        font-size: 1em;
+        border-radius: 3px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
+        .contenedor-formulario .formulario .input-group.checkbox label:hover, .contenedor-formulario .formulario .input-group.radio label:hover {
+          background: #cd9fa6; } /*AQUI CAMBIA EL hover*/
+        .contenedor-formulario .formulario .input-group.checkbox label:before, .contenedor-formulario .formulario .input-group.radio label:before {
+          content: "";
+          display: inline-block;
+          width: 17px;
+          height: 17px;
+          position: absolute;
+          left: 15px;
+          border-radius: 50%;
+          background: none;
+          border: 2px solid #7F1E57; }
+      .contenedor-formulario .formulario .input-group.error label {
+        color: #D32F2F; }
+        .contenedor-formulario .formulario .input-group.error label:hover {
+          background: rgba(211, 47, 47, 0.2); }
+        .contenedor-formulario .formulario .input-group.error label:before {
+          border: 2px solid #D32F2F; }
+      .contenedor-formulario .formulario .input-group.radio input[type="radio"] {
+        display: none; }
+        .contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked + label:before {
+          display: none; }
+        .contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked + label {
+          padding: 5px 15px;
+          background: #7F1E57;
+          border-radius: 2px;
+          color: #f2f2f2; }
+          
+      .contenedor-formulario .formulario .input-group.checkbox label:before {
+        border-radius: 3px; }
+      .contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"] {
+        display: none; }
+        .contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"]:checked + label:before {
+          display: none; }
+        .contenedor-formulario .formulario .input-group.checkbox input[type="checkbox"]:checked + label {
+          background: #7F1E57;
+          color: #f2f2f2;
+          padding: 5px 15px; }  
+    .contenedor-formulario .formulario input[type="submit"] {
+        width: 20%;
+  background: #7F1E57;
+  color: white;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 20px 0px;
+  box-shadow: 0 0px 5px 0px rgb(0, 0, 0);
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  display: inline; }
+      .contenedor-formulario .formulario input[type="submit"]:hover {
+        background: #1976D2; }
+
+/*# sourceMappingURL=estilos.css.map */
+/*basic reset*/
+* {margin: 0; padding: 0;}
+
+html {
+/*  height: 100%;*/
+  /*Image only BG fallback*/
+  background: #e9e9e9;
+}
+
+body {
+  font-family: "Arial";
+  width: 90%;
+  overflow-x: hidden;
+}
+/*form styles*/
+.steps {
+  width: 100%;
+  margin: 10px auto;
+  position: relative;
+}
+
+.steps fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 2px;
+  box-shadow: 0 17px 41px -21px rgb(0, 0, 0);
+  padding: 3% 3%;
+  border-top: 7px solid #3b0c42;
+  box-sizing: border-box;
+  width: 80%;
+
+    -webkit-animation-name: content;
+          animation-name: content;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  line-height: 1.4;
+
+  /*margin: -1% 5%;*/
+  
+  /*stacking fieldsets above each other*/
+    position: absolute;
+}
+/*Hide all except first fieldset*/
+.steps fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+.steps label{
+  color: #333333;
+  text-align: left !important;
+  font-size: 15px;
+  font-weight: 200;
+  padding-bottom: 7px;
+  padding-top: 12px;
+  display: inline-block;
+}
+
+.steps label.label.active {
+            top: -12px;
+            font-size: 12px;
+            line-height: 12px;
+            color: #B6B6B6; }
+
+
+.steps input, .steps textarea {
+  outline: none;
+  display: inline;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  border: 1px solid #d9d9d9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-family: "Arial";
+  -webkti-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-wieght: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+/*buttons*/
+.steps .action-button, .action-button {
+  width: 20%  ;
+  background: #7F1E57;
+  color: white;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 20px 0px;
+  box-shadow: 0 0px 5px 0px rgb(0, 0, 0);
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  display: inline;
+}
+
+
+
+.steps .action-button:hover, .steps .action-button:focus, .action-button:hover, .action-button:focus {
+  background:#9c3073;
+}
+
+/*headings*/
+.fs-title {
+  /*text-transform: uppercase;*/
+     margin: 0 0 2px;
+     line-height: 1;
+     color: #6b0c42;
+     font-size: 18px;
+    font-weight: 400;
+    text-align:center;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #837E7E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  width: 80%;
+  text-align: center;
+}
+#progressbar li {
+  list-style-type: none;
+  color: rgb(51, 51, 51);
+  /*text-transform: uppercase;*/
+  font-size: 12px;
+  width: 30%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 15%;
+  line-height: 22px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: #cd9fa6;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #cd9fa6;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #7F1E57;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+/* moves error logs in tablet/smaller screens */
+
+@media (max-width:1000px){
+
+/*brings inputs down in size */
+.steps input, .steps textarea {
+  outline: none;
+  display: block;
+  width: 100% !important;
+  }
+}
+
+
+
+
+}
+
+
+@media (max-width:675px){
+/*mobile phone: uncollapse all fields: remove progress bar*/
+
+.steps {
+  width: 100%;
+  margin: 50px auto;
+  position: relative;
+}
+
+#progressbar{
+  display:none;
+}
+
+/*show hidden fieldsets */
+.steps fieldset:not(:first-of-type) {
+  display: block;
+}
+
+.steps fieldset{
+  position:relative;
+  width: 100%;
+  margin:0 auto;
+  margin-top: 45px;
+}
+
+.steps .submit {
+  float: right;
+  margin: 28px auto 10px;
+  width: 100% !important;
+}
+}
+
+.alternativo-button {
+  width: 20% !important;
+  background: #dadada;
+  color: #333333;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 0px  2px 0px rgb(0, 0, 0);
+  display: inline;
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.alternativo-button:hover {
+  background:#eadddd;
+}
+
+
+.submit-button {
+  width: 20% !important;
+  background: #7F1E57;
+  color: white;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 0px 5px 0px rgb(0, 0, 0);
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  display: inline;
+  padding: 10px 15px;
+
+}
+
+.submit-button:hover {
+  background:#9c3073;
+  font-wieght: 400;
+}

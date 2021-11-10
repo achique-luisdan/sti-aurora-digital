@@ -1,0 +1,156 @@
+.container {
+    margin: 10px;
+}
+.container .form {
+    margin: auto;
+}
+
+.container .form .input-group {
+    position: relative;
+    margin-bottom: 4px; 
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    font-family: "Arial";
+    color: #333333;
+    width: 70%;
+    outline: none;
+    padding: 18px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #cd9fa6; 
+}
+
+.container .input-group input[type="text"]:focus, 
+.container .input-group input[type="text"]:active,
+.container .input-group input[type="email"]:focus,
+.container .input-group input[type="email"]:active,
+.container .input-group input[type="password"]:focus,
+.container .input-group input[type="password"]:active { 
+    outline: none;
+    border-bottom: 2px solid #7F1E57; 
+}
+
+.container .input-group input[type="text"].error,
+.container .input-group input[type="email"].error,
+.container .input-group input[type="password"].error { 
+    border-bottom: 2px solid #D32F2F; 
+}
+.container .input-group input[type="text"].error + label,
+.container .input-group input[type="email"].error + label,
+.container .input-group input[type="password"].error + label { 
+    color: #D32F2F; 
+}
+
+.container .input-group label.label {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+    font-size: 16px;
+    line-height: 16px;
+    position: absolute;
+    top: 16px;
+    left: 0; 
+}
+
+.container .form .input-group label.label.active { 
+/* (Me costo abstraer estas instrucciones para utilizarla 
+en los otros forms) */
+    top: 0px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #7F1E57;  
+}
+
+.container .input-group.checkbox label,
+.container .input-group.radio label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 15px 5px 51px;
+    font-size: 1em;
+    border-radius: 3px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; 
+}
+
+.container .input-group.checkbox label:hover,
+.container .input-group.radio label:hover {
+    background: #cd9fa6; 
+} 
+
+.container .input-group.checkbox label:before, 
+.container .input-group.radio label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    border-radius: 50%;
+    background: none;
+    border: 2px solid #7F1E57; 
+}
+
+.container .input-group.error label {
+    color: #D32F2F; 
+}
+
+.container .form .input-group.error label:hover {
+    background: rgba(211, 47, 47, 0.2); 
+}
+
+.container .form .input-group.error label:before { 
+    border: 2px solid #D32F2F; 
+}
+
+.container .input-group.radio input[type="radio"] {
+    display: none; 
+}
+
+.container .input-group.radio input[type="radio"]:checked + label:before {
+    display: none; 
+}
+
+.container .input-group.radio input[type="radio"]:checked + label {
+    padding: 5px 15px;
+    background: #7F1E57;
+    border-radius: 2px;
+    color: #f2f2f2; 
+}
+          
+.container .input-group.checkbox label:before {
+    border-radius: 3px; 
+}
+
+.container .input-group.checkbox input[type="checkbox"] {
+    display: none; 
+}
+
+.container .input-group.checkbox input[type="checkbox"]:checked + label:before {
+    display: none; 
+}
+
+.container .input-group.checkbox input[type="checkbox"]:checked + label {
+    background: #7F1E57;
+    color: #f2f2f2;
+    padding: 5px 15px; 
+}
+
+select {
+    display: block;
+}
+
+.materialize-textarea { 
+    border-bottom: 1px solid #cd9fa6 !important;
+    box-shadow: 0 1px 0 0 #cd9fa6 !important;
+}
+.materialize-textarea:focus:not([readonly]) {
+     border-bottom: 1px solid #7F1E57 !important;
+     box-shadow: 0 1px 0 0 #7F1E57 !important;
+}
+

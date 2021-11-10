@@ -1,0 +1,112 @@
+{% load staticfiles %}
+
+{% block content %}
+  <div class="container">      
+    <ul id="progressbar">
+        <li class="active"> Crear cuenta </li>
+        <li> Enviar solicitud </li>
+        <li> Detalles Finales </li>
+    </ul>
+      
+    <form method="POST" class="form steps" name="formulario_registro" accept-charset="UTF-8" enctype="multipart/form-data" novalidate="">
+      {% csrf_token %}
+      <fieldset>
+        <h1 class="fs-title">CREAR CUENTA</h1>
+        <h3 class="fs-subtitle">Información del paso #1</h3>
+        <div class="input-group">
+          {{ form2.imagen_de_perfil }}
+          {{ form2.imagen_de_perfil.errors }}
+        </div>
+        <div class="input-group">
+          {{ form.first_name }}
+          <label for="{{ form.first_name.id_for_label }}" class="label" >{{ form.first_name.label }}</label>
+          {{ form.first_name.errors }}
+        </div>
+        <div class="input-group">
+          {{ form.last_name }}
+          <label class="label" for="{{ form.last_name.id_for_label }}">{{ form.last_name.label }}</label>
+          {{ form.last_name.errors }}
+        </div>
+        <div class="input-group">
+          {{ form.email }}
+          <label class="label" for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+          {{ form.email.errors }}
+        </div>
+        
+        <div class="input-group">
+          {{ form2.fecha_de_nacimiento}}
+          <label class="label" for="{{ form2.fecha_de_nacimiento.id_for_label }}">{{ form2.fecha_de_nacimiento.label }}</label>
+          {{ form2.fecha_de_nacimiento.errors }}
+        </div> 
+        <div class="input-group">
+          {{ form.username }}
+          <label class="label" for="{{ form.username.id_for_label }}">{{ form.username.label }}</label>
+          {{ form.username.errors }}
+        </div>
+        
+        <div class="input-group">
+          {{ form.password1}}
+          <label class="label" for="{{ form.password1.id_for_label }}">{{ form.password1.label }}</label>
+          {{ form.password1.errors }}
+        </div>
+        
+        <div class="input-group">
+          {{ form.password2}}
+          <label class="label" for="{{ form.password2.id_for_label }}">{{ form.password2.label }}</label>
+          {{ form.password2.errors }}
+        </div>
+        
+        <label>{{ form2.sexo.label }}</label>
+        <div class="input-group radio">
+          {% for radio in form2.sexo  %}
+            {% if forloop.first %}
+            {% else %}
+              {{ radio.tag }}
+              <label for="{{ radio.id_for_label }}">{{ radio.choice_label }}</label>
+            {% endif %}
+          {% endfor %}
+          {{ form2.sexo.errors }}
+        </div>
+        
+        <div class="input-group checkbox">
+          <input type="checkbox" name="terminos" id="terminos" value="true" required="">
+          <label for="terminos">Acepto los principios y valores</label>
+        </div>
+        <input type="button" data-page="2" class="alternativo-button" value="Cancelar"0/>
+        <input type="button" data-page="1" id="button_siguiente_1" name="next" class="next action-button" value="Continuar" />
+        </fieldset>
+        <!-- PASO #2 ENVIAR SOLICITUD -->
+        <fieldset>
+          <h1 class="fs-title">ENVIAR SOLICITUD</h1>
+          <h3 class="fs-subtitle">Información del paso #2</h3>
+          <label>{{ form2.aspiraciones.label }}</label>
+          <div class="input-group radio">
+            {% for radio in form3.aspiraciones  %}
+              {% if forloop.first %}
+              {% else %}
+                {{ radio.tag }}
+                <label for="{{ radio.id_for_label }}">{{ radio.choice_label }}</label>
+              {% endif %}
+            {% endfor %}
+            {{ form2.aspiraciones.errors }}
+          </div>
+          <div class="input-group">
+            <label class="label" for="id_comentario" id="label_comentario">Motivos</label>
+            {{ form3.comentario }}
+          </div>
+          <input type="button" data-page="1" name="previous" class="previous action-button" value="Anterior" />
+          <input type="button" data-page="2" name="next" class="next action-button" value="Siguiente" />
+        </fieldset>
+        <!-- PASO #3 DETALLES FINALES -->
+        <fieldset>
+          <h1 class="fs-title">DETALLES FINALES</h1>
+          <h3 class="fs-subtitle">Información del paso #3</h3>
+          <input type="button" data-page="2" name="previous" class="previous action-button" value="Anterior" />
+          <button type="submit" data-page="3" name="next action-button" class="submit-button">Guardar</button>
+        </fieldset>
+      </form>
+  </div>
+{%  endblock  %}
+{% block extrajs %}
+
+{% endblock %}

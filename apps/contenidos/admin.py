@@ -1,0 +1,22 @@
+from django.contrib import admin
+from apps.contenidos.models import NivelEducativo, AreaDelSaber, TipoDeUnidadCurricular, TipoDeDensidad, FormatoDeDuracion, UnidadCurricular, UnidadDidactica, Etiqueta, Articulo, Publicacion, TipoDeSeccion, Seccion, Libro, Autor, Escrito, TipoDeCita, Cita, Imagen, ElementoImagen
+
+admin.site.register(NivelEducativo)
+admin.site.register(AreaDelSaber)
+admin.site.register(TipoDeUnidadCurricular)
+admin.site.register(TipoDeDensidad)
+admin.site.register(FormatoDeDuracion)
+admin.site.register(UnidadCurricular)
+admin.site.register(UnidadDidactica)
+admin.site.register(Etiqueta)
+admin.site.register(Articulo)
+admin.site.register(Publicacion)
+admin.site.register(Seccion)
+admin.site.register(Libro)
+admin.site.register(Autor)
+admin.site.register(Escrito)
+admin.site.register(TipoDeCita)
+admin.site.register(Cita)
+admin.site.register(Imagen)
+admin.site.register(ElementoImagen)
+admin.site.register(TipoDeSeccion)

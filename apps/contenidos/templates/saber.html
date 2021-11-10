@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>lista</title>
+</head>
+<body>
+  {% block content %}      
+  {% for AreaDelSaber in saber %}
+  <table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>descripcion</th>
+    <th>ilustracion_primaria</th>
+    <th>ilustracion_secundaria</th>
+    <th>estado</th>
+    <th>usuario</th>
+    <th>fecha_de_registro</th>
+    <th>fecha_de_modificacion</th>
+    <th>Opciones</th>
+  </tr>
+  <tr>
+    <td>{{ AreaDelSaber.nombre }}</td>
+    <td>{{ AreaDelSaber.descripcion }}</td>
+    <td><img src="{{MEDIA_URL}}{{AreaDelSaber.ilustracion_primaria}}" width="33" height="33"></td>
+    <td><img src="{{MEDIA_URL}}{{AreaDelSaber.ilustracion_secundaria}}" width="33" height="33"></td>
+    <td>{{ AreaDelSaber.estado }}</td>
+    <td>{{ AreaDelSaber.usuario }}</td>
+    <td>{{ AreaDelSaber.fecha_de_registro }}</td>
+    <td>investigado como se hace</td>
+    <td><a href="{% url 'contenidos:editar' AreaDelSaber.pk %}">Editar</a><h1>  </h1> <a href="{% url 'contenidos:eliminar' AreaDelSaber.pk %}">Eliminar</a></td>
+  </tr>
+</table>
+{%  endfor  %}	
+<a href="{% url 'contenidos:ingresar' %}"> Ir a Ingresar otro campo</a>
+{%  endblock  %}	
+</body>
+</html>

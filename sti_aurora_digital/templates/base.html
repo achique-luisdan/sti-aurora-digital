@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}">
+  <link rel="stylesheet" href="{% static 'materialize/font/icon.css' %}">
+  {% block extrastatic %}
+  
+  {% endblock %}
+  <title>
+    {% block title %} 
+      Aurora Digital
+    {% endblock %}
+  </title>
+</head>
+<body>
+  {% block navbar %}
+
+  {% endblock %}
+  {% block content %}
+  {% endblock %}
+
+  <script src="{% static 'generales/js/jquery-2.2.4.min.js' %}"></script>
+  <script src="{% static 'generales/js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'generales/js/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'materialize/js/materialize.min.js' %}"></script>
+  {% block extrajs %}
+  
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,268 @@
+.nav-extended {
+    background: #572f5c;
+}
+
+.steps {
+  margin: 3%;
+  padding: 2%; 
+  background:#ffffff;
+  display: flex;
+}
+
+.steps fieldset {
+  width: 65%;
+  border: 0 none;
+  background:#ffffff;
+  border-radius: 2px;
+  /*box-shadow: 0 17px 41px -21px rgb(0, 0, 0);*/
+  padding: 3% 3%;
+  border-top: 7px solid #3b0c42;
+  box-sizing: border-box;
+    -webkit-animation-name: content;
+          animation-name: content;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  line-height: 0.9;
+  
+  /*stacking fieldsets above each other*/
+    position: absolute;
+}
+/*Hide all except first fieldset*/
+.steps fieldset:not(:first-of-type) {
+  display: none;
+}
+
+/*inputs*/
+.steps label{
+  /*color: #333333;*/
+  text-align: left !important;
+  font-size: 15px;
+  font-weight: 200;
+  padding-bottom: 7px;
+  padding-top: 12px;
+  display: inline-block;
+}
+
+.steps label.label.active {
+  top: -12px;
+  font-size: 12px;
+  line-height: 12px;
+  color: #B6B6B6; 
+}
+
+
+.steps input  {
+  outline: none;
+  display: inline;
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 10px 15px;
+  border: 1px solid #d9d9d9;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkti-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-wieght: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+/*buttons*/
+.steps .action-button, .action-button {
+  width: 20%  ;
+  background: #7F1E57;
+  color: white;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 20px 0px;
+  box-shadow: 0 0px 5px 0px rgb(0, 0, 0);
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  display: inline;
+}
+
+
+
+.steps .action-button:hover, .steps .action-button:focus, .action-button:hover, .action-button:focus {
+  background:#9c3073;
+}
+
+/*headings*/
+.fs-title {
+  /*text-transform: uppercase;*/
+     margin: 0 0 2px;
+     line-height: 1;
+     color: #6b0c42;
+     font-size: 18px;
+     font-weight: 400;
+     text-align:center;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 13px;
+  color: #837E7E;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*progressbar*/
+#progressbar {
+  width: 95%;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+#progressbar li {
+  list-style-type: none;
+  color: rgb(51, 51, 51);
+  /*text-transform: uppercase;*/
+  font-size: 12px;
+  width: 32%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 15%;
+  line-height: 22px;
+  display: block;
+  font-size: 12px;
+  color: #333;
+  background: #cd9fa6;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #cd9fa6;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #7F1E57;
+  color: white;
+}
+
+/* RESPONSIVE */
+
+/* moves error logs in tablet/smaller screens */
+
+@media (max-width:1000px){
+
+/*brings inputs down in size */
+.steps input {
+  outline: none;
+  display: block;
+  }
+}
+
+}
+
+@media (max-width:675px){
+/*mobile phone: uncollapse all fields: remove progress bar*/
+
+.steps {
+  margin: 50px auto;
+  position: relative;
+}
+
+#progressbar{
+  display:none;
+}
+
+/*show hidden fieldsets */
+.steps fieldset:not(:first-of-type) {
+  display: block;
+}
+
+.steps fieldset{
+  position:relative;
+  margin:0 auto;
+  margin-top: 45px;
+}
+
+.steps .submit {
+  float: right;
+  margin: 28px auto 10px;
+  width: 100% !important;
+}
+}
+
+.alternativo-button {
+  width: 20% !important;
+  background: #dadada;
+  color: #333333;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 0px  2px 0px rgb(0, 0, 0);
+  display: inline;
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+}
+
+.alternativo-button:hover {
+  background:#eadddd;
+}
+
+
+.submit-button {
+  width: 20% !important;
+  background: #7F1E57;
+  color: white;
+  border: 0 none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0 0px 5px 0px rgb(0, 0, 0);
+  -webkit-transition: all 0.3s linear 0s;
+  -moz-transition: all 0.3s linear 0s;
+  -ms-transition: all 0.3s linear 0s;
+  -o-transition: all 0.3s linear 0s;
+  transition: all 0.3s linear 0s;
+  display: inline;
+  padding: 10px 15px;
+}
+
+.submit-button:hover {
+  background:#9c3073;
+  font-wieght: 400;
+}
+
+.datepicker{
+ background: lighten-pink;
+}

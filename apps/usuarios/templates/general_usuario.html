@@ -1,0 +1,51 @@
+{% extends 'navbar.html' %}
+
+{% load staticfiles %}
+{% block extrastatic %}
+  <link rel="stylesheet" href="{% static 'css/estilos-steps.css' %}">
+  <link rel="stylesheet" href="{% static 'generales/css/form.css' %}">
+  <link rel="stylesheet" href="{% static 'alertifyjs/css/alertify.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'alertifyjs/css/themes/default.min.css' %}"/> 
+  <link rel="stylesheet" href="{% static 'alertifyjs/css/themes/semantic.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'alertifyjs/css/themes/bootstrap.min.css' %}"/>
+  <!--<link rel="stylesheet" href="{% static 'alertifyjs/css/alertify.rtl.min.css' %}"/>-->
+  <!--<link rel="stylesheet" href="{% static 'alertifyjs/css/themes/default.rtl.min.css' %}"/>-->
+  <!--<link rel="stylesheet" href="{% static 'alertifyjs/css/themes/semantic.rtl.min.css' %}"/>-->
+  <!--<link rel="stylesheet" href="{% static 'alertifyjs/css/themes/bootstrap.rtl.min.css' %}"/>-->
+
+{% endblock %}
+
+{% block title %}
+    Panel de Inicio
+{% endblock%}
+
+
+{% block navbar-tabs %}
+  <div class="nav-content">
+    <ul class="tabs tabs-transparent">
+      <li class="tab"><a class="active" href="#test1">Inicio de Sesión</a></li>
+      <li class="tab"><a href="#test2">Registro de Usuario</a></li>
+    </ul>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div id="test1" class="col s12">
+    {% block inicio %}
+      {% include 'inicio_de_sesion.html' %}
+    {% endblock %}       
+  </div>
+  <div id="test2" class="col s12">
+    {% block registro %}
+      {% include 'registro_de_usuario.html' %}
+    {% endblock %}
+  </div>
+{% endblock %}
+
+{% block extrajs %}
+  <script src="{% static 'navegacion/js/eventos.js' %}"></script>
+  <script src="{% static 'js/eventos-form.js' %}"></script>
+  <script src="{% static 'js/form.js' %}"></script>
+  <script src="{% static 'js/login.js' %}"></script>
+  <script src="{% static 'alertifyjs/alertify.min.js' %}"></script>
+{% endblock %}

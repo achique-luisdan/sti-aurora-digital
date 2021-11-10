@@ -1,0 +1,19 @@
+<div class="container">
+<form action="" method="post" id="form-login" class="form">{% csrf_token %}
+    <h3> Login </h3>
+    <div>
+        <img src="" id="foto-login"/>
+        <div id="fullName"> </div>
+    </div>
+    <div class="input-group" id="grupo-nombre">
+        <label for="nombre-login" class="label">Usuario</label>
+        <input type="text" name="nombre" id="nombre-login"/>
+    </div> 
+    <br>
+    <div class="input-group" id="grupo-clave">
+        <label for="clave-login" class="label">Contraseña</label>
+        <input type="password" name="clave" id="clave-login"/><br>
+    </div>
+    <button type="submit" id="iniciar-sesion" class="btn pink darken-3"> Iniciar </button>
+</form>
+</div>

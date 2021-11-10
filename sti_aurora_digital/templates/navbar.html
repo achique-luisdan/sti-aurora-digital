@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Aurora Digital</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="por-definir1.html">Ayuda</a></li>
+        <li><a href="por-definir2.html">Comunidad</a></li>
+        <li><a href="por-definir3.html">Mi Cuenta</a></li>
+      </ul>
+    </div>
+    {% block navbar-tabs %}
+    {% endblock %}
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="por-definir1.html">Ayuda</a></li>
+    <li><a href="por-definir2.html">Comunidad</a></li>
+    <li><a href="por-definir3.html">Ejemplo</a></li>
+    <li><a href="por-definir.html">Mobile</a></li>
+    <li><a href="por-definir1.html">yrimar</a></li>
+  </ul>
+{% endblock %}
+
+{% block content %}
+Contenido por defecto.
+{% endblock %}
+{% block extrajs %}
+<script src="{% static 'navegacion/js/eventos.js' %}"></script>
+{% endblock %}
